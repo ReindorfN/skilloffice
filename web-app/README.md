@@ -164,13 +164,3 @@ This structure ensures the code is organized, maintainable, and easy to understa
 ## 🎓 Project Purpose
 
 SkillOffice was created to formalize blue-collar job services in Ghana, making it easier for skilled artisans to find work and for customers to access quality services. The platform promotes transparency, accountability, and quality improvement within the service industry.
-
----
-
-## 📞 Support
-
-For technical issues or questions about the platform, refer to the application documentation or contact your system administrator.
-
----
-
-**Built with ❤️ for the Ghanaian service industry**
