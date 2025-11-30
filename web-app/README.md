@@ -107,40 +107,6 @@ This structure ensures the code is organized, maintainable, and easy to understa
 
 ---
 
-## 🚀 Getting Started
-
-### What You Need
-
-- A web server with PHP 7.4 or higher
-- Apache web server (with URL rewriting enabled)
-- A Firebase project (for authentication and database)
-- Paystack account (for payment processing)
-
-### Quick Setup
-
-1. **Upload Files**: Copy the `web-app` folder to your web server
-
-2. **Configure Firebase**:
-   - Create a Firebase project at [firebase.google.com](https://firebase.google.com)
-   - Enable Authentication (Email/Password method)
-   - Enable Firestore Database
-   - Update `app/config/config.php` with your Firebase credentials
-
-3. **Configure Payments**:
-   - Sign up for a Paystack account
-   - Get your API keys (public and secret)
-   - Update Paystack keys in `app/config/config.php`
-
-4. **Set Up URL Routing**:
-   - Ensure your server supports `.htaccess` files
-   - The application will handle all URL routing automatically
-
-5. **Access Your Application**:
-   - Navigate to your web server URL
-   - You'll see the SkillOffice welcome screen
-
----
-
 ## 📱 User Experience
 
 ### Customer Journey
