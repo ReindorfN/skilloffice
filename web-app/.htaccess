@@ -1,0 +1,17 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Redirect all requests to index.php (Front Controller Pattern)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
+
+# Security: Prevent directory listing
+Options -Indexes
+
+# Security: Protect sensitive files
+<FilesMatch "\.(env|log|ini|conf)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+

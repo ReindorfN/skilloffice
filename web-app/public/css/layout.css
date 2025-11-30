@@ -1,0 +1,92 @@
+/**
+ * Layout Styles - 20:80 Split Layout
+ * Ensures proper vertical separation between sidebar (20%) and main content (80%)
+ */
+
+/* Main Layout Container */
+.app-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Left Sidebar - Exactly 20% */
+.sidebar {
+    width: 20%;
+    min-width: 200px;
+    max-width: 280px;
+    background-color: var(--surface);
+    border-right: 2px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 100;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+    /* Ensure sidebar stays on the left */
+    box-sizing: border-box;
+}
+
+/* Right Main Content - Exactly 80% */
+.main-content {
+    width: 80%;
+    margin-left: 20%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    position: relative;
+    flex-shrink: 0;
+    /* Ensure content stays on the right */
+    box-sizing: border-box;
+    /* Clear visual separation */
+    border-left: 1px solid transparent; /* Placeholder for visual separation */
+}
+
+.main-content-body {
+    flex: 1;
+    padding: var(--spacing-xl);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Ensure proper separation on all screen sizes */
+@media (min-width: 769px) {
+    .sidebar {
+        width: 20%;
+    }
+    
+    .main-content {
+        width: 80%;
+        margin-left: 20%;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 280px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
