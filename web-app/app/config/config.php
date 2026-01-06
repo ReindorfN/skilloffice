@@ -14,7 +14,13 @@ define('FIREBASE_APP_ID', '1:812751536814:web:9f3c4b056f3a1142dde33f');
 // Application Settings
 define('APP_NAME', 'SkillOffice');
 define('APP_URL', 'http://169.239.251.102:442/~reindorf.narh/skilloffice/web-app');
-define('BASE_URL', 'http://169.239.251.102:442/~reindorf.narh/skilloffice/web-app'); // Alias for APP_URL
+define('BASE_URL', 'http://169.239.251.102:442/~reindorf.narh/skilloffice/web-app'); 
+
+//local 
+// define('APP_URL', 'localhost/skilloffice/web-app');
+// define('BASE_URL', 'localhost/skilloffice/web-app'); 
+
+
 define('TIMEZONE', 'Africa/Accra');
 
 // Paystack Configuration
